@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <title>TODO_List</title>
+</head>
+<body>
+    <!-- <nav id="nav">
+        <div>
+            <img alt="ToDologo"src="./images/Logo.png">
+        </div>
+        <div id="search">
+            <input type="text" id="search-bar" name="search" placeholder="Enter ToDO List Task"/>
+            <span class="material-symbols-outlined">search</span>
+            <button class="btn" id="addBtn"><span class="material-symbols-outlined">add</span>ADD</button>
+        </div>
+    </nav> -->
+    <div class="logo">
+        <img alt="Logo is Loading..." src="./images/Logo.png">
+    </div>
+    <nav class="navBar">
+        <div class="searchBar">
+            <input id="search-bar" type=text placeholder="Enter Your To-do List Task">
+            <span class="material-symbols-outlined">search</span>
+        </div>
+        <button class="btn" id="addBtn">+Add</button>
+    </nav>
+
+    <section class="model hide" id="model">
+        <form id="task-form" >
+            <select name="status" required>
+                <option value="TODO">To Do</option>
+                <option value="STARTED">Started</option>
+                <option value="COMPLETED">Completed</option>
+            </select>
+            <select name="priority" required>
+                <option value="LOW">Low Priority</option>
+                <option value="HIGH">High Priority</option>
+            </select>
+            <input type="text" name="title" placeholder="Task Tittle" required/>
+            <input type="date" name="date" placeholder="Enter Due Date" required/>
+            <div class="form-btn">
+                <button class="btn" id="submit-btn">Create Task</button>
+                <button type="button" class="close-btn btn" id="cloes-btn">Close</button>
+            </div>
+        </form>
+    </section>
+
+    <main>
+        <section id="TODO" class="task-holder">
+            <div class="container" >
+                <div class="To-Do-1">
+                    <span>To-DO List</span>
+                    <span class="count" id="task-todo-cnt">0</span>
+                </div>
+                <div class="High-1">
+                    <span>High Priority</span>
+                    <span class="count" id="task-priority-todo-cnt">0</span>
+                </div>
+            </div>
+            <div class="card">
+                <div id="cardText">Lorem ipsum dolor<br>voluptatum seditis reiciendis.</div>
+                <button id="cardbutton"><i class="fa-solid fa-trash-can"></i></button>
+            </div>
+        </section>
+        <section id="STARTED" class="task-holder">
+            <div class="container" >
+                <div class="To-Do-1">
+                    <span>Started List</span>
+                    <span class="count" id="task-st-cnt">0</span>
+                </div>
+                <div class="High-1">
+                    <span>High Priority</span>
+                    <span class="count" id="task-priority-st-cnt">0</span>
+                </div>
+            </div>
+        </section>
+        <section id="COMPLETED" class="task-holder">
+            <div class="container" >
+                <div class="To-Do-1">
+                    <span>Completed List</span>
+                    <span class="count" id="task-cm-cnt">0</span>
+                </div>
+                <div class="High-1">
+                    <span>High Priority</span>
+                    <span class="count" id="task-priority-cm-cnt">0</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
