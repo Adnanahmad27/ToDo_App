@@ -49,19 +49,25 @@ form.addEventListener("submit" , (e) => {
         taskContainer.children[0].children[0].children[1].innerText = `${taskCnt[2]}`;
         taskContainer.children[0].children[1].children[1].innerText = `${priorityCnt[2]}`;
     }
-
-    // const card = document.createElement("div");
-    // card.className = "card";
-    // card.innerHTML = ``;
-    
-    //taskContainer.appendChild(card);
+    //         <div class="card">
+    //             <div id="title">Lorem ipsum dolorvoluptatum seditis reiciendis.</div>
+    //             <div id="date">12-12-2024</div>
+    //             <div id="card-btn">
+    //                 <span class="material-symbols-outlined" id="deleteBtn">edit</span>
+    //                 <span class="material-symbols-outlined" id="editBtn">delete</span>
+    //             </div>
+    //         </div>
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `
+            <h4>${taskInfo.title}</h4>
+            <div id="date">${taskInfo.date}</div>
+            <div id="card-btn">
+                <span class="material-symbols-outlined">edit</span>
+                <span class="material-symbols-outlined">delete</span>
+            </div>
+                    `;
+    taskContainer.appendChild(card);
     form.reset();
     toggleModel();
 });
-/*
-<div class="card">
-            <div id="cardText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui tempora magni, quidem sunt
-                laudantium ducimu dignissimos? Quos <br>voluptatum seditis reiciendis.</div>
-            <button id="cardbutton"><i class="fa-solid fa-trash-can"></i></button>
-   </div>
-*/
