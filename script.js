@@ -30,6 +30,11 @@ form.addEventListener("submit" , (e) => {
         if(taskInfo.priority==="HIGH"){
             priorityCnt[0] = priorityCnt[0]+1;
         };
+        if(taskCnt[0] === 0){
+            const todoBox = document.getElementById("todo-box");
+            todoBox.classList.toggle("hide");
+            todoBox.classList.toggle("show-box");
+        }
         taskCnt[0] = taskCnt[0]+1;
         
         taskContainer.children[0].children[0].children[1].innerText = `${taskCnt[0]}`;
