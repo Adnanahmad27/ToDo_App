@@ -12,6 +12,13 @@ function toggleModel(){
     model.classList.toggle("hide");
     model.classList.toggle("show");
 }
+function editTask(e){
+
+}
+function deleteTask(e){
+
+}
+
 addBtn.addEventListener("click" , toggleModel);
 closeBtn.addEventListener("click" , toggleModel);
 form.addEventListener("submit" , (e) => {
@@ -66,12 +73,14 @@ form.addEventListener("submit" , (e) => {
     card.className = "card";
     card.innerHTML = `
             <h4>${taskInfo.title}</h4>
-            <div id="date">${taskInfo.date}</div>
-            <div id="card-btn">
-                <span class="material-symbols-outlined">edit</span>
-                <span class="material-symbols-outlined">delete</span>
+            <div>${taskInfo.date}</div>
+            <div>
+                <span class="material-symbols-outlined card-btn">edit</span>
+                <span class="material-symbols-outlined card-btn">delete</span>
             </div>
                     `;
+    card.children[2].children[0].addEventListener("click" , editTask);
+    card.children[2].children[1].addEventListener("click" , deleteTask);
     taskContainer.appendChild(card);
     form.reset();
     toggleModel();
